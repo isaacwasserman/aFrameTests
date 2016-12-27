@@ -10,14 +10,16 @@
       </a-assets>
       <a-sky color="#004"></a-sky>
       <a-entity camera="userHeight:1.4" wasd-controls=""></a-entity>
-      <a-collada-model id="car" src="#car-dae" position="-0.7 0 -100" rotation="0 90 0" sound="src:#car-sound; on:model-loaded">
+      <a-collada-model id="car" src="#car-dae" position="-0.7 0 -100" rotation="0 90 0">
         <a-animation attribute="position"
                dur="7000"
+               begin="model-loaded"
                fill="forwards"
                to="-0.7 0 20"
                repeat="0"
          ></a-animation>
       </a-collada-model>
+      <a-sound id="sound-player" src="#car-sound"></a-sound>
       <a-plane color="#002" height="200" width="200" rotation="-90 0 0"></a-plane>
     </a-scene>
     <script src="carChase.js"></script>
