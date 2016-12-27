@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <h1 id="text" style="position: fixed;z-index: 100;font-size: 75;font-family: sans-serif;color: white;font-weight: 400;margin: 50px;opacity:0;transition:opacity 2.5s" onload="setTimeout(function(){document.getElementByID('text').style.opacity = '1'},4000));">Un Experimento de A-Frame</h1>
+      <a-entity id="camera" camera="userHeight: 10" fov="26" look-controls wasd-controls="fly:true" position="24.3 10.8 -7" rotation="24.4 30 0">
+        <a-animation attribute="position" from="24.3 10.8 -7" to="33.6 10 -4.7" begin="0" dur="6500"></a-animation>
+        <a-animation attribute="rotation" from="24.4 30 0" to="16.8 86.7 0" begin="0" dur="6500"></a-animation>
+      </a-entity>
+      <a-sky color="#00FFEC">
+        <a-animation attribute="color" from="#00FFEC" to="#2A3B7F" begin="0" dur="6500"></a-animation>
+      </a-sky>
+      <a-box color="#F2D287" width="40" height="30" depth="4" position="0 0 -10" rotation="0 0 0"></a-box>
+      <a-box color="#F2D287" width="43" height="30" depth="4" position="1.5 0 -13" rotation="0 0 0"></a-box>
+      <a-box color="#F2D287" width="46" height="30" depth="32" position="3 0 -30" rotation="0 0 0"></a-box>
+      <a-entity position="43 15 -20" rotation="0 0 0" light="type:directional;intensity:1;color:#ff976d">
+        <a-animation attribute="light.intensity" to="0.3" dur="5000"></a-animation>
+        <a-animation attribute="light.color" from="#ff976d" to="#0000ff" begin="2500" dur="4000"></a-animation>
+      </a-entity>
+      <a-entity position="27 66 45" rotation="0 0 0" light="type:directional;intensity:2;color:#ff976d">
+        <a-animation attribute="position" to="-30 0 34" dur="5000"></a-animation>
+        <a-animation attribute="light.intensity" to="1" dur="5000"></a-animation>
+        <a-animation attribute="light.color" from="#ff976d" to="#0000ff" begin="2500" dur="4000"></a-animation>
+      </a-entity>
+<!--      <a-entity position="-27.53 52.83 72.99" rotation="24.6371851906254 87.08958485988514 0" text="text:An A-Frame Experiment;size:10;bevelThickness:0;bevelSize:0;bevelEnabled:true" material="opacity:0;depthTest:true;flatShading:false;fog:true;metalness:0;roughness:1;shader:flat">-->
+        <a-animation attribute="material.opacity" from="0" to="1" begin="6000" dur="2500"></a-animation>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
