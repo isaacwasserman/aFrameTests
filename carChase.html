@@ -5,10 +5,9 @@
   <body>
     <a-scene>
       <a-assets>
-        <a-asset-item id="car-obj" src="aventador/Avent.obj" crossorigin="anonymous"></a-asset-item>
-        <a-asset-item id="car-mtl" src="aventador/Avent.mtl" crossorigin="anonymous"></a-asset-item>
+        <a-asset-item id="car" src="aventador.dae" crossorigin="anonymous"></a-asset-item>
       </a-assets>
-      <a-entity obj-model="obj: #car-obj; mtl: #car-mtl"></a-entity>
+      <a-entity collada-model="#car"></a-entity>
     </a-scene>
   </body>
 </html>
