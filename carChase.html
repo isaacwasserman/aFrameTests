@@ -6,9 +6,10 @@
     <a-scene id="scene">
       <a-assets id="assets">
         <a-asset-item id="car-dae" src="https://zeekw.github.io/aFrameTests/aventador.dae"></a-asset-item>
+        <audio id="car-sound" src="https://zeekw.github.io/aFrameTests/driveby.m4a"></audio>
       </a-assets>
       <a-entity camera="userHeight:1.4" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector="default-camera"></a-entity>
-      <a-collada-model id="car" src="#car-dae" position="-0.7 0 -40" rotation="0 90 0" sound="src: url(driveby.mp3); begin: 5000">
+      <a-collada-model id="car" src="#car-dae" position="-0.7 0 -40" rotation="0 90 0" sound="src:#car-sound; begin: 5000">
         <a-animation attribute="position"
                dur="5000"
                begin="5000"
